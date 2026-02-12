@@ -28,7 +28,7 @@ function Contact() {
     const data = Object.fromEntries(formData.entries())
 
     try {
-      const response = await fetch('http://192.168.18.37:5000/api/contact', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

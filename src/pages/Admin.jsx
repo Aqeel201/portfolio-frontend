@@ -40,7 +40,7 @@ function Admin() {
     const fetchMessages = async () => {
         setIsRefreshing(true)
         try {
-            const response = await fetch('http://localhost:5000/api/messages', {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/messages`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }
@@ -67,7 +67,7 @@ function Admin() {
 
     const deleteMessage = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/messages/${id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/messages/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -88,7 +88,7 @@ function Admin() {
 
     const updateStatus = async (id, newStatus) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/messages/${id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/messages/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ function Admin() {
     const handleLogin = async (e) => {
         e.preventDefault()
         try {
-            const response = await fetch('http://localhost:5000/api/login', {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
@@ -129,7 +129,7 @@ function Admin() {
     const handleRequestReset = async (e) => {
         e.preventDefault()
         try {
-            const response = await fetch('http://localhost:5000/api/auth/request-password-reset', {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/request-password-reset`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email })
@@ -150,7 +150,7 @@ function Admin() {
     const handleResetPassword = async (e) => {
         e.preventDefault()
         try {
-            const response = await fetch('http://localhost:5000/api/auth/reset-password', {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/reset-password`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, otp, newPassword })
@@ -171,7 +171,7 @@ function Admin() {
     const handleChangePassword = async (e) => {
         e.preventDefault()
         try {
-            const response = await fetch('http://localhost:5000/api/auth/change-password', {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/change-password`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
