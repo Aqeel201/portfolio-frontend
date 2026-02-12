@@ -1,0 +1,18 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#0B0F14"/>
+  <circle cx="380" cy="360" r="180" fill="url(#pulse)" />
+  <circle cx="760" cy="360" r="220" fill="url(#pulse2)" />
+  <rect x="140" y="140" width="920" height="440" rx="26" fill="#0F151D" stroke="#22D3EE" stroke-opacity="0.3"/>
+  <path d="M220 460C340 400 420 380 520 360C640 330 740 330 860 360C960 390 1040 420 1080 450" stroke="#22D3EE" stroke-width="3" stroke-linecap="round"/>
+  <path d="M220 380C340 330 420 310 520 290C640 260 740 260 860 290C960 320 1040 350 1080 380" stroke="#00F5A0" stroke-width="3" stroke-linecap="round" stroke-opacity="0.7"/>
+  <defs>
+    <radialGradient id="pulse" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(380 360) rotate(90) scale(180)">
+      <stop stop-color="#00F5A0" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#00F5A0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pulse2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(760 360) rotate(90) scale(220)">
+      <stop stop-color="#22D3EE" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
