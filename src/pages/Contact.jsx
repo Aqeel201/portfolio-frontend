@@ -141,9 +141,10 @@ function Contact() {
                   <>
                     <span>DISPATCH MESSAGE</span>
                     <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </>
                 )}
-                  </button>
-                {status === 'error' && <p className="text-center text-rose-500 text-[10px] font-black uppercase tracking-widest">Connection Error. Service might be offline.</p>}
+              </button>
+              {status === 'error' && <p className="text-center text-rose-500 text-[10px] font-black uppercase tracking-widest">Connection Error. Service might be offline.</p>}
             </form>
           </div>
         </div>
